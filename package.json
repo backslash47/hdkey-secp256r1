@@ -1,11 +1,11 @@
 {
-  "name": "hdkey",
+  "name": "@ont-community/hdkey-secp256r1",
   "version": "1.0.0",
   "description": "Bitcoin BIP32 hierarchical deterministic keys",
   "main": "lib/hdkey.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cryptocoinjs/hdkey"
+    "url": "git://github.com/OntologyCommunityDevelopers/hdkey"
   },
   "license": "MIT",
   "keywords": [
@@ -18,9 +18,9 @@
     "crypto"
   ],
   "bugs": {
-    "url": "https://github.com/cryptocoinjs/hdkey/issues"
+    "url": "https://github.com/OntologyCommunityDevelopers/hdkey/issues"
   },
-  "homepage": "https://github.com/cryptocoinjs/hdkey",
+  "homepage": "https://github.com/OntologyCommunityDevelopers/hdkey",
   "devDependencies": {
     "bigi": "^1.1.0",
     "coveralls": "^2.10.0",
@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "coinstring": "^2.0.0",
-    "safe-buffer": "^5.1.1",
-    "secp256k1": "^3.0.1"
+    "elliptic": "^6.4.0",
+    "safe-buffer": "^5.1.1"
   },
   "scripts": {
     "lint": "standard",

@@ -1,4 +1,4 @@
-hdkey
+hdkey - secp256r1 version
 =====
 
 [![NPM Package](https://img.shields.io/npm/v/hdkey.svg?style=flat-square)](https://www.npmjs.org/package/hdkey)
