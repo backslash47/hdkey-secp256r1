@@ -11,7 +11,7 @@ A JavaScript component for [BIP32](https://github.com/bitcoin/bips/blob/master/b
 Installation
 ------------
 
-    npm i --save hdkey
+    npm i --save @ont-community/hdkey-secp256r1
 
 
 Usage
