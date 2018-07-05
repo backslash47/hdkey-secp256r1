@@ -15,7 +15,8 @@
     "key",
     "hierarchical",
     "deterministic",
-    "crypto"
+    "crypto",
+    "secp256r1"
   ],
   "bugs": {
     "url": "https://github.com/OntologyCommunityDevelopers/hdkey/issues"
