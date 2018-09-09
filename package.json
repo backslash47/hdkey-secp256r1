@@ -1,6 +1,6 @@
 {
   "name": "@ont-community/hdkey-secp256r1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bitcoin BIP32 hierarchical deterministic keys",
   "main": "lib/hdkey.js",
   "repository": {
