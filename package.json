@@ -1,11 +1,12 @@
 {
-  "name": "@ont-community/hdkey-secp256r1",
-  "version": "1.0.1",
-  "description": "Bitcoin BIP32 hierarchical deterministic keys",
-  "main": "lib/hdkey.js",
+  "name": "hdkey-secp256r1-ts",
+  "version": "1.1.0",
+  "description": "BIP32 hierarchical deterministic keys using secp256r1 curve",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/OntologyCommunityDevelopers/hdkey"
+    "url": "git://github.com/backslash47/hdkey-secp256r1-ts"
   },
   "license": "MIT",
   "keywords": [
@@ -18,32 +19,58 @@
     "crypto",
     "secp256r1"
   ],
-  "bugs": {
-    "url": "https://github.com/OntologyCommunityDevelopers/hdkey/issues"
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testRegex": "/test/.*\\.test\\.(ts|tsx|js)$"
   },
-  "homepage": "https://github.com/OntologyCommunityDevelopers/hdkey",
+  "bugs": {
+    "url": "https://github.com/backslash47/hdkey-secp256r1-ts/issues"
+  },
+  "homepage": "https://github.com/backslash47/hdkey-secp256r1-ts",
   "devDependencies": {
-    "bigi": "^1.1.0",
-    "coveralls": "^2.10.0",
-    "ecurve": "^1.0.0",
-    "istanbul": "^0.3.17",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.1",
-    "mochify": "^2.10.0",
-    "secure-random": "^1.0.0",
-    "standard": "^7.1.1"
+    "@types/node": "^10.0.0",
+    "@types/elliptic": "^6.4.0",
+    "@types/jest": "^23.3.1",
+    "@types/bigi": "^1.4.2",
+    "@types/ecurve": "^1.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "bigi": "^1.4.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "ecurve": "^1.0.6",
+    "jest": "^23.4.2",
+    "jest-cli": "^23.6.0",
+    "ts-jest": "^23.1.4",
+    "ts-loader": "^4.3.0",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "tslint-no-circular-imports": "^0.4.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "coinstring": "^2.0.0",
-    "elliptic": "^6.4.0",
-    "safe-buffer": "^5.1.1"
+    "bn.js": "^4.11.8",
+    "bs58check": "^2.1.2",
+    "elliptic": "^6.4.1"
   },
   "scripts": {
-    "lint": "standard",
-    "browser-test": "mochify --wd -R spec",
-    "test": "standard && mocha",
-    "unit": "mocha",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js",
-    "coveralls": "npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info"
+    "test": "jest",
+    "lint": "tslint --project ./",
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development --display-error-details --progress --color",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode production --progress --color"
   }
 }
