@@ -1,12 +1,12 @@
 {
-  "name": "hdkey-secp256r1-ts",
+  "name": "hdkey-secp256r1",
   "version": "1.1.0",
   "description": "BIP32 hierarchical deterministic keys using secp256r1 curve",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/backslash47/hdkey-secp256r1-ts"
+    "url": "git://github.com/backslash47/hdkey-secp256r1"
   },
   "license": "MIT",
   "keywords": [
@@ -32,9 +32,9 @@
     "testRegex": "/test/.*\\.test\\.(ts|tsx|js)$"
   },
   "bugs": {
-    "url": "https://github.com/backslash47/hdkey-secp256r1-ts/issues"
+    "url": "https://github.com/backslash47/hdkey-secp256r1/issues"
   },
-  "homepage": "https://github.com/backslash47/hdkey-secp256r1-ts",
+  "homepage": "https://github.com/backslash47/hdkey-secp256r1",
   "devDependencies": {
     "@types/node": "^10.0.0",
     "@types/elliptic": "^6.4.0",
